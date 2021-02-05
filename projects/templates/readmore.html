@@ -1,0 +1,50 @@
+        <div class="class" style="font-family: 'Jost', sans-serif;">
+            {% extends 'base.html'%}
+            {% load ratings %}
+            {%block content%}
+            <div class="hello">
+                <div class="container mt-5">
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="view view-cascade overlay">
+                                <img class="img-fluid" src="{{projects.projectscreenshot.url}}" alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <!-- Card content -->
+                            <div class="card-body card-body-cascade">
+
+                                <!-- Title -->
+                                <h4 class="card-title"><strong>{{projects.Job_type}}</strong></h4>
+                                <!-- Subtitle -->
+                                <h6 class="font-weight-bold indigo-text py-2">Description</h6>
+                                <!-- Text -->
+                                <p class="card-text">{{projects.description}}
+                                <p class="card-text">{{projects.location}}
+                                    <h5 style="color: blue;">Qualification</h5>
+                                <p class="card-text">{{projects.qualification}}
+                                    <h5 style="color: blue;">Salary</h5>
+                                <p class="card-text">{{projects.salary}}
+                                    <h5 style="color: blue;">Contacts</h5>
+                                <p class="card-text">{{projects.contacts}}
+                                </p>
+                                <a href="{{projects.companyurl}}">
+                                    <button class="btn btn-primary">Check out</button>
+                                </a>
+                                <h5  class="text-secondary">By: {{projects.user}}</h5>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <style>
+                .hello {
+                    height:130vh;
+                }
+            </style>
+                {%endblock%}
+        </div>
